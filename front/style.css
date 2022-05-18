@@ -1,0 +1,44 @@
+#register-wrapper{
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 250px);
+    width: 400px;
+    min-height: 500px;
+    padding: 1rem;
+    border: 1px solid #bdbdbd;
+    background-color: #edefef;
+    box-shadow: #bdbdbd 1px 1px 10px;
+}
+
+#register-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+#register-icon{
+    padding: 1rem;
+}
+.register-error{
+    text-align: left!important;
+    color: red;
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0 0;
+}
+.registerSubmit{
+    padding: 1rem 0;
+}
+
+#welcome-user{
+    position: absolute;
+    bottom: 1rem;
+    padding: 1rem;
+    left: calc(50% - 25vw);
+    min-width: 50vw;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sign In</title>
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="text-center">
+
+<!-- User registered -->
+<div id="welcome-user" class="hidden"></div>
+
+<!-- Form Sign in -->
+<form class="form-signin">
+    <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72"
+         height="72">
+    <h1 class="h3 mb-3 font-weight-normal" id="message">Please sign in</h1>
+    <p class="register-error" id="sign-mail-error"></p>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Sign in</button>
+    <a href="#" id="register">Register</a>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+</form>
+
+<!-- Form Pop-up Sign up -->
+<div id="register-wrapper" class="hidden">
+    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+    <img src="https://cdn-icons-png.flaticon.com/64/3135/3135715.png" alt="user icon" id="register-icon">
+    <form>
+        <div class="form-group">
+            <label for="registerInputEmail" class="sr-only">Email address</label>
+            <input type="text" id="registerInputEmail" class="form-control" placeholder="Email address" required>
+            <p class="register-error" id="mail-error"></p>
+        </div>
+        <div class="row">
+        <div class="form-group col">
+            <label for="registerInputPassword" class="sr-only">Password</label>
+            <input type="password" id="registerInputPassword" class="form-control" placeholder="Password" required>
+        </div>
+        <div class="form-group col">
+            <label for="registerInputPassword2" class="sr-only">Password</label>
+            <input type="password" id="registerInputPassword2" class="form-control" placeholder="Confirm Password" required>
+            <p class="register-error" id="password-error"></p>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="registerName" class="sr-only">Name</label>
+            <input type="text" id="registerName" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="registerPhone" class="sr-only">Phone</label>
+            <input type="text" id="registerPhone" class="form-control" placeholder="Phone" required> <br>
+            <p class="register-error" id="phone-error"></p>
+        </div>
+        <div class="btn-group" id="register-btn">
+            <button class="btn btn-lg btn-primary" type="submit" id="registerValid">Valid</button>
+            <button class="btn btn-lg btn-danger" type="submit" id="registerCancel">Cancel</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

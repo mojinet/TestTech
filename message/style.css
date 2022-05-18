@@ -1,0 +1,185 @@
+/*General*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #323248;
+    margin:0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    padding: 0;
+}
+
+input[type="text"],input[type="submit"], textarea, select{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+textarea{
+    height: 300px;
+}
+
+label{
+    font-weight: bold;
+}
+
+#main h2{
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+/*main*/
+#main-wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*lateral*/
+#lateral-bar{
+    padding: 2rem;
+    background-color: #474767;
+    height: 100%;
+    min-width: 220px;
+}
+
+/*main*/
+#main{
+    flex-grow: 1;
+    height: 100%;
+    padding: 1rem;
+}
+
+/*Pop-up*/
+#message-wrapper{
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    width: 500px;
+    color: black;
+    border: 1px solid grey;
+    box-shadow: grey 1px 1px 10px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+}
+
+.btn-group{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#submit, #cancel{
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#submit{
+    background-color: green;
+}
+
+#submit:hover{
+    background-color: #01a101;
+    cursor: pointer;
+}
+
+#cancel{
+    background-color: darkred;
+}
+
+#cancel:hover{
+    background-color: #a10101;
+    cursor: pointer;
+}
+
+.checkbox-grp{
+    display: inline;
+}
+
+/*Message*/
+#messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    position: relative;
+    list-style: none;
+    border-radius: 10px 0px 10px 0px;
+    font-family: Arial;
+    margin: 1rem 3rem;
+    padding: 1rem;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100px;
+    background-color: #edefef;
+    box-shadow: black 1px 1px 5px;
+    text-align: justify;
+}
+
+.priority{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 2rem;
+}
+
+.message-pop{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-20%);
+    bottom: 10px;
+    background-color: green;
+    color: white;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+#confirm-message{
+    transform: translateX(-20%);
+    background-color: green;
+}
+
+#error-message{
+    transform: translateX(-50%);
+    background-color: #7e3131;
+}
+
+/*tools*/
+#overlay{
+    z-index: 999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #323248;
+}
+
+.hidden{
+    display: none;
+}
