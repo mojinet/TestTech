@@ -33,7 +33,7 @@ $('#submit').bind('click', function(e){
 });
 
 // Update message
-getMessage()
+getMessage();
 setInterval(() => getMessage(), 60*1000);
 
 /*
@@ -52,10 +52,10 @@ function sendData(title, message, dest, isPriority) {
         success: function (response) {
             $('#overlay').addClass('hidden');
             $('#message-wrapper').addClass('hidden');
-            $('#confirm-message').removeClass('hidden')
+            $('#confirm-message').removeClass('hidden');
             setTimeout(()=>{
-                $('#confirm-message').addClass('hidden')
-            },5*1000)
+                $('#confirm-message').addClass('hidden');
+            },5*1000);
         }
     });
     return false;
@@ -82,25 +82,25 @@ function getMessage(){
 function updateMessages(messages){
     $("#messages").text('')
     jQuery.each(messages, function(i, val) {
-        let titleElt = $('<b></b>').text(messages[i]['title'])
-        let destElt = $('<span></span>').text(' Pour ' + messages[i]['dest'])
-        let messageElt = $('<p></p>').text(messages[i]['content'])
-        let hrElt = $('<hr>')
-        let priorityElt = $('<span class="priority"></span>').text('⚠️')
+        let titleElt = $('<b></b>').text(messages[i]['title']);
+        let destElt = $('<span></span>').text(' Pour ' + messages[i]['dest']);
+        let messageElt = $('<p></p>').html(messages[i]['content'].replaceAll('&#10;', '<br/>'));
+        let hrElt = $('<hr>');
+        let priorityElt = $('<span class="priority"></span>').text('⚠️');
 
         let liElt = $('<li class="message"></li>')
             .append(titleElt)
             .append(destElt)
             .append(hrElt)
-            .append(messageElt)
+            .append(messageElt);
         if(messages[i]['is_prioritaire']){
-            liElt.append(priorityElt)
+            liElt.append(priorityElt);
         }
         $("#messages").append(liElt);
     });
 }
 
 function cleanForm(){
-    $('#titre').val('')
-    $('#message').val('')
+    $('#titre').val('');
+    $('#message').val('');
 }
