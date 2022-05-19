@@ -22,6 +22,7 @@ $('#submit').bind('click', function(e){
 
     if(title !== '' && title !== null && message !== '' && message !== null && dest !== '' && dest !== null){
         sendData(title,message,dest,isPriority);
+        getMessage();
         cleanForm();
     }else{
         $('#error-message').removeClass('hidden');
