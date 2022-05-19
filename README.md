@@ -1,8 +1,8 @@
-# front
+# front : preview
 👉Adding Pop-up Sign up  
 ![image](https://user-images.githubusercontent.com/21148133/169268244-7ad95dec-d40e-4026-af6a-aada6350c013.png)
 
-# message
+# message : preview
 👉 run  
 ``php -S localhost:8080`` 
 
